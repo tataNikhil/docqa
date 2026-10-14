@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "docqa_api"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

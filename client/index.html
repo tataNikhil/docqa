@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DocQA</title>
+    <link rel="stylesheet" href="main.css" />
+    <!-- Catalyst's browser toolkit: used here only for "Sign out" -->
+    <script src="https://static.zohocdn.com/catalyst/sdk/js/4.6.2/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div id="loading" class="loading">Loading…</div>
+
+    <div id="app" class="app" hidden>
+        <!-- LEFT: account, documents, conversations -->
+        <aside class="sidebar">
+            <div class="account">
+                <div>
+                    <div class="brand">DocQA</div>
+                    <div id="user-email" class="muted small"></div>
+                </div>
+                <button id="sign-out" class="link">Sign out</button>
+            </div>
+
+            <section>
+                <h2>Your documents</h2>
+                <label id="drop-zone" class="drop-zone">
+                    <input id="file-input" type="file" accept=".pdf,.docx,.txt,.md" multiple hidden>
+                    <span id="drop-text">Click or drop files to upload<br>
+                        <span class="muted small">PDF, Word, .txt, .md — up to 5 MB each</span></span>
+                </label>
+                <p class="muted small">Tick documents to ask only those. None ticked = all.</p>
+                <ul id="doc-list" class="doc-list"></ul>
+            </section>
+
+            <section>
+                <div class="row">
+                    <h2>Conversations</h2>
+                    <button id="new-chat" class="small-btn">+ New</button>
+                </div>
+                <ul id="conv-list" class="conv-list"></ul>
+            </section>
+        </aside>
+
+        <!-- MIDDLE: the chat -->
+        <main class="chat">
+            <div id="messages" class="messages"></div>
+            <div id="suggestions" class="suggestions"></div>
+            <form id="ask-form" class="ask-form">
+                <textarea id="question" rows="2" placeholder="Ask a question about your documents…" required></textarea>
+                <button id="ask-btn" type="submit">Ask</button>
+            </form>
+            <div id="scope" class="muted small scope"></div>
+        </main>
+
+        <!-- RIGHT: the passage behind a citation -->
+        <aside id="source-panel" class="source-panel" hidden>
+            <div class="row">
+                <h2 id="source-title">Source</h2>
+                <button id="close-source" class="link">Close</button>
+            </div>
+            <div id="source-meta" class="muted small"></div>
+            <pre id="source-text" class="source-text"></pre>
+        </aside>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+</body>
+
+</html>
