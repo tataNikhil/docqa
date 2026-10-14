@@ -6,6 +6,7 @@ sources it used. Every user's documents are private to them.
 
 **🔗 Live demo:** https://docqa-60091697131.development.catalystserverless.in/app/index.html
 
+> I built this on a student offer which is valid for 6 months. If the link doesnt work, the free tier has come to an end.
 > The demo runs in a test (development) environment. Sign up with any email,
 > and please don't upload anything sensitive.
 
