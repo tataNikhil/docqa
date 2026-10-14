@@ -1,0 +1,13 @@
+{
+	"deployment": {
+		"name": "docqa_api",
+		"stack": "python_3_13",
+		"type": "advancedio",
+		"env_variables": {
+			"QUICKML_ENDPOINT_KEY": "paste-your-quickml-endpoint-key-here"
+		}
+	},
+	"execution": {
+		"main": "main.py"
+	}
+}
